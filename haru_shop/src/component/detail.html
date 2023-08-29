@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+
+        :root {
+            --bg: #3a2a34;
+            --color: #f71f96;
+        }
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .box-container {
+            min-height: 100vh;
+            padding: 4.5rem 7%;
+            background: var(--bg);
+            position: relative;
+        }
+
+        .box-container .heading {
+            font-size: 3.5rem;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+
+        .box-container .heading span {
+            text-transform: uppercase;
+            color: var(--color);
+        }
+
+        .box-container .box {
+            background: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+            border-radius: .5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .box-container .box .image-container {
+            flex: 1 1 50rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .box-container .box .image-container .small-image {
+            width: 20%;
+        }
+
+        .box-container .box .image-container .small-image img {
+            width: 100%;
+            padding: 1rem;
+            border-radius: .5rem;
+            border: .1rem solid rgba(255, 255, 255, .3);
+            cursor: pointer;
+        }
+
+        .box-container .box .image-container .big-image {
+            width: 80%;
+        }
+
+        .box-container .box .image-container .big-image img {
+            width: 100%;
+            padding: 1rem;
+            filter: drop-shadow(0 .5rem 1rem rgba(0, 0, 0, 0.2));
+        }
+
+        .box-container .box .content {
+            flex: 1 1 35rem;
+        }
+
+        .box-container .box .content h3 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 1rem 0;
+        }
+
+        .box-container .box .content p {
+            color: #fff;
+            font-size: 1.7rem;
+            margin: 1rem 0;
+        }
+
+        .box-container .box .content .stars i {
+            color: var(--color);
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .box-container .box .content .price {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: var(--color);
+            margin: .5rem 0;
+        }
+
+        .box-container .box .content .price span {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+        .box-container .box .content .btn {
+            display: inline-block;
+            color: #fff;
+            font-size: 1.7rem;
+            border: .1rem solid var(--color);
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: .8rem 3rem;
+        }
+
+        .box-container .box .content .btn:hover {
+            background: var(--color);
+        }
+
+        #buy-amount button {
+            width: 35px;
+            height: 35px;
+            outline: none;
+            background: none;
+            border: 1px solid #eeccee;
+            cursor: pointer;
+        }
+
+        #buy-amount {
+            display: flex;
+        }
+
+        #buy-amount #amount {
+            width: 40px;
+            text-align: center;
+            border: 1px solid #eeccee;
+        }
+
+        #buy-amount button:hover {
+            background-color: #eeccee;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box-container">
+
+    <h1 class="heading"><span>Chi tiết</span> sản phẩm</h1>
+
+    <div class="box">
+
+        <div class="image-container">
+            <div class="big-image">
+                <img src="https://bizweb.dktcdn.net/100/092/840/products/thuc-an-hat-kitcat-cho-meo-mini-fish-medley-goi-1-2kg.jpg"
+                     class="big-img" alt="">
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Giới thiệu sản phẩm</h3>
+            <p>Whiskey hạt khô là sản phẩm giàu protein.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div id="buy-amount">
+                <button handleMinus()>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+                    </svg>
+                </button>
+                <input type="number" id="amount" value="1">
+                <button onclick="handlePlus()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="price">159.000 VND</div>
+            <a href="#" class="btn">Mua Ngay</a>
+        </div>
+
+    </div>
+</div>
+<script>
+    let amountElement = document.getElementById("amount")
+    let amount = amountElement.value
+    let render=(amount)=>{
+        amountElement.value=amount
+    }
+
+
+    let handlePlus = () => {
+        amount++
+        render(amount)
+    }
+
+    let handleMinus=()=>{
+        if (amount>1){
+            amount--
+            render(amount)
+        }
+    }
+    amountElement.addEventListener('input',()=>{
+
+    })
+</script>
+</body>
+</html>
