@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+ #detail{
+     --bg: #fff;
+     --color: #BAAD3A;
+     font-size: large;
+}
+
+
+
+.box-container {
+    min-height: 100vh;
+    padding: 4.5rem 7%;
+    background: var(--bg);
+    position: relative;
+    margin-top: 7rem;
+}
+.box-container #detail{
+    margin-bottom: 0px;
+}
+
+.box-container .heading {
+    font-size: 3.5rem;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.box-container .heading span {
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+.box-container .box {
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.box-container .box .image-container {
+    flex: 1 1 50rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.box-container .box .image-container .small-image {
+    width: 20%;
+}
+
+.box-container .box .image-container .small-image img {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .1rem solid rgba(255, 255, 255, .3);
+    cursor: pointer;
+}
+
+.box-container .box .image-container .big-image {
+    width: 80%;
+}
+
+.box-container .box .image-container .big-image img {
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.box-container .box .content {
+    flex: 1 1 35rem;
+}
+
+.box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: black;
+    margin: 1rem 0;
+}
+
+.box-container .box .content p {
+    color: black;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+.box-container .box .content .stars i {
+    color: var(--color);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.box-container .box .content .price {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--color);
+    margin: .5rem 0;
+}
+
+.box-container .box .content .price span {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: line-through;
+}
+.button-detail{
+    color: black;
+    background: #baad3a;
+    height: 50px;
+    border-radius: 3px;
+    border: 0px;
+
+}
+.button-detail:hover{
+    background: #BAAD3A;
+}
+.aaa{
+    /*border: solid 1px #baad3a;*/
+    float: left;
+    /*ma*/
+}
+
+.input-detail{
+    width: 65px;
+    padding: 17px;
+    border: solid 1px #baad3a ;
+    border-radius: 3px;
+    height: 50px;
+    margin: 0px;
+}
+.tang-giam{
+    margin-left: 40px !important;
+}
+.box-container .box .content .btn {
+    display: inline-block;
+    /*margin-top: 1rem;*/
+    padding: .9rem 3rem;
+    border-radius: 10rem;
+    /*border: .1rem solid var(--primary);*/
+    font-size: 1.7rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.box-container .box .content .btn:hover {
+    color: white;
+}
+
+#buy-amount button {
+    width: 35px;
+    height: 35px;
+    outline: none;
+    background: none;
+    border: 1px solid #eeccee;
+    cursor: pointer;
+}
+
+#buy-amount {
+    display: flex;
+    position: relative;
+}
+
+.cong{
+    position: absolute;
+    top: 10px;
+    left:95px;
+}
+.tru{
+    position: absolute;
+    top: 10px;
+   margin-right:346px;
+}
+
+#buy-amount #amount {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #eeccee;
+}
+
+#buy-amount button:hover {
+    background-color: #eeccee;
+}
+

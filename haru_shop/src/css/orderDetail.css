@@ -1,0 +1,4 @@
+table {
+    width: 60%; /* Đặt chiều rộng bảng là 100% của phần tử chứa bảng */
+    font-size: 16px; /* Định dạng kích thước chữ cho bảng */
+}
